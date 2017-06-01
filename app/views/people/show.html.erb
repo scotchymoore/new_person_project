@@ -1,0 +1,36 @@
+<h1>Person Profile</h1>
+<br />
+
+
+<h1><%=@person.name %>
+<ul>
+  <li>
+    Age: <%= @person.age %>
+  </li>
+
+  <li>
+    Hair Color: <%= @person.hair_color %>
+  </li>
+
+  <li>
+    Eye Color: <%= @person.eye_color %>
+  </li>
+
+  <li>
+    Gender: <%= @person.gender %>
+  </li>
+
+  <li>
+    Alive: <%= @person.alive %>
+  </li>
+</ul>
+
+
+
+  <i>
+    Posted At: <%= @person.created_at %>
+  </i>
+
+
+<br />
+  <%= link_to 'Back to Index', people_path %>

@@ -1,0 +1,21 @@
+<h1> New Person Project</h1>
+<hr />
+
+<%= link_to 'Create New Person', new_person_path %>
+
+<% if @people.empty? %>
+<h3>No one currently in database. Please create a person.</h3>
+<%else%>
+<h3>List of People</h3>
+  <ul>
+      <% @people.each do |person| %>
+      <li>
+        <%= link_to(person.name, person_path(person)) %>
+        <span> - </span>
+        <%= link_to 'Edit', edit_person_path(person) %>
+        <span> - </span>
+        <%= link_to 'Delete', person_path(person), method: :delete%>
+      </li>
+      <% end%>
+    </ul>
+<% end %>
